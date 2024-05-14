@@ -11,5 +11,6 @@ test('whatsnew', async ({ page }) => {
   //  await page.getByText('What's New').click();
   await page.getByRole('button',{ name: "What's New" }).click();
   await page.getByText('Features available on Vachan Online').click();
-  await page.getByText('Close').click();
+  //await page.getByText('Close').click();
+  await page.getByRole('button',{ name: 'Close' }).click();
 })

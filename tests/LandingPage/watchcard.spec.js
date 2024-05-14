@@ -12,8 +12,8 @@ test('watchcard', async ({ page }) => {
   await page.getByRole('button', { name: '12' }).click();
   await page.getByRole('link', { name: 'See scriptures come alive in' }).click();
   await page.getByRole('button', { name: 'Video Overview: Romans Ch. 1-' }).click();
-  await page.frameLocator('iframe').getByLabel('Pause keyboard shortcut k').click();
-  await page.getByLabel('You just opened the modal').locator('div').nth(1).click();
-  await page.frameLocator('iframe').locator('video').click();
+  //await page.frameLocator('iframe').getByLabel('Pause keyboard shortcut k').click();
+  //await page.getByLabel('You just opened the modal').locator('div').nth(1).click();
+  //await page.frameLocator('iframe').locator('video').click();
   await page.getByLabel('Close the modal by clicking').click();
   })

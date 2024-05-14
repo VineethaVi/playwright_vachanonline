@@ -1,20 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const { test, expect } = require('@playwright/test');
  
 test('notes', async ({ page }) => {
@@ -46,7 +29,8 @@ test('notes', async ({ page }) => {
 //     await page.getByText('1 In the beginning was the').click();
     await page.locator('[type="button"][aria-label="add"]').click();
     await page.locator('[role="textbox"]').fill("Note for Luke 1:1");
-    await page.getByText("Save").click();
+   // await page.getByText("Save").click();
+   await page.getByRole('button', { name: 'Save' }).click();
      expect(await page.getByText("Note for Luke 1:1").nth(1).isVisible());
 })
 
