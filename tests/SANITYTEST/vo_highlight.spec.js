@@ -17,10 +17,11 @@ test('test', async ({ page }) => {
   await page.getByRole('button', { name: '5', exact: true }).click();
   await page.getByText('The sick man answered him, “Sir, I have no one to put me into the pool when the water is stirred up, and while I am going another steps down before me.”').click();
  // await page.getByTestId(name:'b').click();
- await page.locator('//*[@id="root"]/div[2]/div[1]/div/div/div[3]/div').isVisible();
- await page.getByTestId('LensRoundedIcon').nth(2).click();
+//  await page.locator('//*[@id="root"]/div[2]/div[1]/div/div/div[3]/div').isVisible();
+//  await page.getByTestId('LensRoundedIcon').nth(2).click();
  //await page.getByRole('option', { name: 'b' }).click();
-  
+ await page.locator('[data-testid="LensRoundedIcon"][data-code="a"]');
+ await page.getByTitle('Highlights').click();
   //await page.locator('li').filter({ hasText: 'border_color' }).click();
 //   await page.getByLabel('Close').click();
 //   await page.getByText('7 The sick man answered him').click();
